@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+	background: #292929;
+}
+
+nav {
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	text-transform: uppercase;
+	font-family: "Anton" ,sans-serif;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+    nav :hover{
+        color: white;
+        transform: scale(1.2);
+    }
+    
+    .menu-item {
+	flex: 1;
+    }
+    
+    .menu-left {
+	text-align: left;
+	margin-left: 4em;
+    }
+    
+    .menu-center {
+	text-align: center;
+    }
+    
+    .menu-right {
+	text-align: right;
+	margin-right: 4em;
+    }
+    
+    .menu-link {
+	padding: 0 30px;
+    }
+
+    .projects-link {
+        text-decoration: none; /* Remove underline from link */
+    }
+    
+    .projects {
+        display: block;
+        width: 200px;
+        height: 100px;
+        background-color: #292929;
+        text-align: center;
+        line-height: 100px; /* Vertically center the text */
+        color: black; /* Text color */
+        border: 1px solid black; /* Optional: add border */
+        opacity: 0; /* Initial opacity */
+        animation: fadeIn 8s forwards; /* Apply fade-in animation */
+    }
+    
+    .projects:hover {
+        background-color: #292929; /* Change background on hover */
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    
+.hero-image {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper-img {
+	position: absolute;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	width: 50%;
+	height: 100vh;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.box {
+	background: #292929;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.images {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.img {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 400px;
+	background: black;
+}
+
+.left {
+	background: url("./NEXUS2.jpeg")
+		no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.right {
+	background: url("./NEXUS7.jpg")
+		no-repeat 50% 50%;
+	background-size: cover;
+}
+
+p {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgba(100, 99, 99, 0.829);
+    transition-property: inherit;
+	font-family: "Baskervville SC",serif;
+	font-size: 300px;
+}
+@media(max-width:600px) {
+    .title{
+        display: none;
+    }
+
+    .small-display-text {
+        display: none; /* Hide by default */
+    }
+    
+    @media (max-width: 600px) {
+        .clickable-text {
+            display: none; /* Hide on small displays */
+        }
+        .small-display-text {
+            display: block; /* Show on small displays */
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: small; /* Adjust the font size as needed */
+        }
+    }
+}
+
+.title .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+
+
+.sidebar-text {
+	font-family: "Monument Extended";
+	position: absolute;
+	top: 20%;
+	right: 0.4em;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	color: transparent;
+	-webkit-text-stroke: 1px rgb(247, 243, 243);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+    
+    .projects {
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	font-family: "Anton" ,sans-serif;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+    }
+    .projects:hover{
+        color: white;
+        transform: scale(2.4);
+    }
+    
+    .img-nav {
+	position: absolute;
+	right: 10%;
+	bottom: 13%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	color: #000;
+	font-family: "Anton" , sans-serif ;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+    }
+	.next {
+		position:-webkit-sticky;
+		top: 40px;
+		left: 80px;
+		transform: translate(-50%, -50%);
+		text-transform: uppercase;
+		font-family: "Anton" ,sans-serif;
+		cursor: pointer;
+		transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+	
+		}
+		.next:hover{
+			color: white;
+			transform: scale(2.4);
+		}
+    
+   /* .next {
+	position: relative;
+	top: 40px;
+	left: 80px;
+	font-family: "Anton" ,sans-serif ;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+/*
+    }
+    .next:hover{
+        color: #0df740;
+        transform: scale(1.2);
+    }
+    
+	.next-link {
+        text-decoration: none; /* Remove underline from link */
+   /* }*/
+    
+    
